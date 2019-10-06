@@ -13,7 +13,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/228b0f27ac5393765a6efbdee31a456e
+      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
       Handler: app.getBand
       Runtime: nodejs10.x
       Events:
@@ -26,7 +26,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/228b0f27ac5393765a6efbdee31a456e
+      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
       Handler: app.getAllBands
       Runtime: nodejs10.x
       Events:
@@ -39,7 +39,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/228b0f27ac5393765a6efbdee31a456e
+      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
       Handler: app.postBand
       Runtime: nodejs10.x
       Events:
@@ -52,7 +52,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/228b0f27ac5393765a6efbdee31a456e
+      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
       Handler: app.putBand
       Runtime: nodejs10.x
       Events:
@@ -65,7 +65,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/228b0f27ac5393765a6efbdee31a456e
+      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
       Handler: app.deleteBand
       Runtime: nodejs10.x
       Events:
