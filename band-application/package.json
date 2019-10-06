@@ -1,0 +1,18 @@
+{
+  "name": "get-band",
+  "version": "1.0.0",
+  "description": "Lambda function for querying a single band.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha tests/unit/"
+  },
+  "keywords": [
+    "Band"
+  ],
+  "author": "Mika J. Korpela",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}

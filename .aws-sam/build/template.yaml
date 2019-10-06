@@ -1,0 +1,76 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'aws-lambda-band-application
+
+  Sample SAM Template for aws-lambda-band-application
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  GetBandFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: arn:aws:iam::258390702311:role/StudioManagerRole
+      CodeUri: GetBandFunction
+      Handler: app.getBand
+      Runtime: nodejs10.x
+      Events:
+        GetBand:
+          Type: Api
+          Properties:
+            Path: /bands/{bandid}
+            Method: get
+  GetAllBandsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: arn:aws:iam::258390702311:role/StudioManagerRole
+      CodeUri: GetAllBandsFunction
+      Handler: app.getAllBands
+      Runtime: nodejs10.x
+      Events:
+        GetBand:
+          Type: Api
+          Properties:
+            Path: /bands
+            Method: get
+  PostBandFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: arn:aws:iam::258390702311:role/StudioManagerRole
+      CodeUri: PostBandFunction
+      Handler: app.postBand
+      Runtime: nodejs10.x
+      Events:
+        GetBand:
+          Type: Api
+          Properties:
+            Path: /bands
+            Method: post
+  PutBandFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: arn:aws:iam::258390702311:role/StudioManagerRole
+      CodeUri: PutBandFunction
+      Handler: app.putBand
+      Runtime: nodejs10.x
+      Events:
+        GetBand:
+          Type: Api
+          Properties:
+            Path: /bands/{bandid}
+            Method: put
+  DeleteBandFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: arn:aws:iam::258390702311:role/StudioManagerRole
+      CodeUri: DeleteBandFunction
+      Handler: app.deleteBand
+      Runtime: nodejs10.x
+      Events:
+        GetBand:
+          Type: Api
+          Properties:
+            Path: /bands/{bandid}
+            Method: delete

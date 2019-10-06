@@ -1,2 +1,3 @@
 # aws-lambda-band-application
-Band application implemented with AWS Lambda and Serverless Application Module (SAM).
+
+This project contains REST service for accessing band information from AWS DynamoDB.
