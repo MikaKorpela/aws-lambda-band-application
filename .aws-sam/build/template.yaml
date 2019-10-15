@@ -6,8 +6,20 @@ Description: 'aws-lambda-band-application
 
   '
 Globals:
+  Api:
+    Cors:
+      AllowMethods: '''*'''
+      AllowHeaders: '''*'''
+      AllowOrigin: '''*'''
   Function:
     Timeout: 3
+Parameters:
+  CognitoUserPoolName:
+    Type: String
+    Default: StudioManager
+  CognitoUserPoolClientName:
+    Type: String
+    Default: StudioManager
 Resources:
   GetBandFunction:
     Type: AWS::Serverless::Function

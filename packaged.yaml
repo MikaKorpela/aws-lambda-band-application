@@ -6,14 +6,26 @@ Description: 'aws-lambda-band-application
 
   '
 Globals:
+  Api:
+    Cors:
+      AllowMethods: '''*'''
+      AllowHeaders: '''*'''
+      AllowOrigin: '''*'''
   Function:
     Timeout: 3
+Parameters:
+  CognitoUserPoolName:
+    Type: String
+    Default: StudioManager
+  CognitoUserPoolClientName:
+    Type: String
+    Default: StudioManager
 Resources:
   GetBandFunction:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
+      CodeUri: s3://pikecape-band-application/700681c7c142fa3f06cdaddd09b450e8
       Handler: app.getBand
       Runtime: nodejs10.x
       Events:
@@ -26,7 +38,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
+      CodeUri: s3://pikecape-band-application/f72bc639857d187aabaa2584bd05555a
       Handler: app.getAllBands
       Runtime: nodejs10.x
       Events:
@@ -39,7 +51,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
+      CodeUri: s3://pikecape-band-application/44aa6fc77a6c43e1a96f2889de26d00c
       Handler: app.postBand
       Runtime: nodejs10.x
       Events:
@@ -52,7 +64,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
+      CodeUri: s3://pikecape-band-application/af082d947bd116be518e500692570b92
       Handler: app.putBand
       Runtime: nodejs10.x
       Events:
@@ -65,7 +77,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::258390702311:role/StudioManagerRole
-      CodeUri: s3://mk-serverless-tutorial/122d1bfb6458e084a5cd1a2ea45412d4
+      CodeUri: s3://pikecape-band-application/ea136b512df603b9e1d378e369595c82
       Handler: app.deleteBand
       Runtime: nodejs10.x
       Events:

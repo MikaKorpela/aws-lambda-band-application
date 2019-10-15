@@ -6,6 +6,6 @@ This project contains REST service for accessing band information from AWS Dynam
 
 sam build
 
-sam package --output-template packaged.yaml --s3-bucket mk-serverless-tutorial
+sam package --output-template packaged.yaml --s3-bucket pikecape-band-application
 
 sam deploy --template-file packaged.yaml --region eu-north-1 --capabilities CAPABILITY_IAM --stack-name band-application
